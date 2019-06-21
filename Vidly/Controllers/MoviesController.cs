@@ -19,7 +19,7 @@ namespace Vidly.Controllers
 				new Customer(){Name = "Customer 1" },
 				new Customer(){Name = "Customer 2" }
 			};
-
+			
 			var viewModel = new RandomMovieViewModel()
 			{
 				Customers = customers,
