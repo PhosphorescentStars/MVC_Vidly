@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
@@ -24,7 +21,7 @@ namespace Vidly.Controllers
 				new Customer(){Name = "Customer 1" },
 				new Customer(){Name = "Customer 2" }
 			};
-			
+
 			var viewModel = new RandomMovieViewModel()
 			{
 				Customers = customers,

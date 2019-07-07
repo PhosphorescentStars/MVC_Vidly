@@ -1,21 +1,45 @@
 ﻿<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            @Html.ActionLink("Vidly", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
-                <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">@Html.ActionLink("Vidly", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</a>
 
-                
-                <li>@Html.ActionLink("Random Movie", "Random", "Movies")</li>
-            </ul>
-        </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li>
+                        <a href="@Url.Action("Index", "Home")" class="nav-link active"><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("About", "Home")" class="nav-link active"><span>About</span></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Contact", "Home")" class="nav-link active"><span>Contact</span></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Random", "Movies")" class="nav-link active"><span>Random</span></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Movies")" class="nav-link active"><span>Movies</span></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Customers")" class="nav-link active"><span>Customers</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
     </div>
 </div>

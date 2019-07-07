@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
-using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -18,7 +15,7 @@ namespace Vidly.Controllers
 			};
 
 		public ActionResult Index() => View(customers);
-				
+
 		public ActionResult Details(int id)
 		{
 			return View(customers.Where(customer => customer.Id.Equals(id)).FirstOrDefault());

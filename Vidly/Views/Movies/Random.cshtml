@@ -8,20 +8,19 @@
 
 <h2 class="@className">@Model.Movie.Name</h2>
 
-
 @if (Model.Customers.Count == 0)
 {
-    <text>The movie has not been rented</text>
+<text>The movie has not been rented</text>
 }
 else
 {
-    <text>Customers</text>
-    <ul>
-        @foreach (var customer in Model.Customers)
+<text>Customers</text>
+<ul>
+    @foreach (var customer in Model.Customers)
         {
-            <li>@customer.Name</li>
+    <li>@customer.Name</li>
         }
-    </ul>
+</ul>
 }
 
 @*Trying out a comment*@
