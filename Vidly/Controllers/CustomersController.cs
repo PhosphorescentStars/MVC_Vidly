@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
@@ -19,7 +20,7 @@ namespace Vidly.Controllers
 			new Customer(){Name = "Simon Simon", Id=3 }
 		};
 
-		public ActionResult Index() => View(context.Customers);
+		public ActionResult Index() => View(context.Customers.Include(c => c.MembershipType));
 
 		public ActionResult Details(int id) 
 			=> View(context.Customers.Where(customer => customer.Id.Equals(id)).FirstOrDefault());

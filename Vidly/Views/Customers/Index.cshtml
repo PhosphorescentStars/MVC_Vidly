@@ -1,31 +1,39 @@
 ﻿@model IEnumerable<Vidly.Models.Customer>
 
 @{
-    ViewBag.Title = "Customers";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Customers";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Customers</h2>
 @if (Model.Equals(null) || Model.Count().Equals(0))
 {
-<text>There are no customers available.</text>
+	<text>There are no customers available.</text>
 }
 else
 {
-<table class="table table-bordered table-striped">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name) &nbsp; <span class="glyphicon glyphicon-user"></span>
-        </th>
-    </tr>
+	<table class="table table-bordered table-striped">
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Name) &nbsp; <span class="glyphicon glyphicon-user"></span>
+			</th>
+			<th>Discount Rate</th>
+		</tr>
 
-    @foreach (var item in Model)
-        {
-    <tr>
-        <td>
-            @Html.ActionLink(item.Name, $"Details/{item.Id}")
-        </td>
-    </tr>
-        }
-</table>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.ActionLink(item.Name, $"Details/{item.Id}")
+				</td>
+				<td>
+					@{
+						string discountRate = item.MembershipType == null ?
+							"0% (Not a member)" : $"{item.MembershipType.DiscountRate}%";
+						@discountRate
+					}
+				</td>
+			</tr>
+		}
+	</table>
 }
