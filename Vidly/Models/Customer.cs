@@ -10,7 +10,7 @@ namespace Vidly.Models
 		[StringLength(255, ErrorMessage = "Length must not exceede 255 characters")]
 		public string Name { get; set; }
 		public bool IsSubscribedToNewsletter { get; set; }
-		public MembershipType MembershipType { get; set; } //Navigation property
-		public byte MembershipTypeId { get; set; } //FK
+		public MembershipType MembershipType { get; set; } //Navigation property		
+		public byte? MembershipTypeId { get; set; } //FK
 	}
 }
