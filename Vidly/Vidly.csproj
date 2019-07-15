@@ -212,6 +212,10 @@
     <Compile Include="Migrations\201907150013330_MembershipTypeDescriptionIsRequired.Designer.cs">
       <DependentUpon>201907150013330_MembershipTypeDescriptionIsRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907150022329_AddBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201907150022329_AddBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201907150022329_AddBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -360,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907150013330_MembershipTypeDescriptionIsRequired.resx">
       <DependentUpon>201907150013330_MembershipTypeDescriptionIsRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907150022329_AddBirthdayToCustomer.resx">
+      <DependentUpon>201907150022329_AddBirthdayToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

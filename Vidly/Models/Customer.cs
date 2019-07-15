@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Vidly.Models
 {
@@ -11,6 +12,7 @@ namespace Vidly.Models
 		public string Name { get; set; }
 		public bool IsSubscribedToNewsletter { get; set; }
 		public MembershipType MembershipType { get; set; } //Navigation property		
-		public byte? MembershipTypeId { get; set; } //FK
+		public byte? MembershipTypeId { get; set; } //FK		
+		public DateTime? Birthday { get; set; }
 	}
 }
