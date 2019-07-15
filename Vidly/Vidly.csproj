@@ -204,6 +204,14 @@
     <Compile Include="Migrations\201907140157211_NullableMembershipTypeId.Designer.cs">
       <DependentUpon>201907140157211_NullableMembershipTypeId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907150009501_AddMembershipTypeDescription.cs" />
+    <Compile Include="Migrations\201907150009501_AddMembershipTypeDescription.Designer.cs">
+      <DependentUpon>201907150009501_AddMembershipTypeDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907150013330_MembershipTypeDescriptionIsRequired.cs" />
+    <Compile Include="Migrations\201907150013330_MembershipTypeDescriptionIsRequired.Designer.cs">
+      <DependentUpon>201907150013330_MembershipTypeDescriptionIsRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -346,6 +354,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907140157211_NullableMembershipTypeId.resx">
       <DependentUpon>201907140157211_NullableMembershipTypeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907150009501_AddMembershipTypeDescription.resx">
+      <DependentUpon>201907150009501_AddMembershipTypeDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907150013330_MembershipTypeDescriptionIsRequired.resx">
+      <DependentUpon>201907150013330_MembershipTypeDescriptionIsRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

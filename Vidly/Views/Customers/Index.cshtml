@@ -18,22 +18,30 @@ else
 				@Html.DisplayNameFor(model => model.Name) &nbsp; <span class="glyphicon glyphicon-user"></span>
 			</th>
 			<th>Discount Rate</th>
+			<th>Membership Type</th>
 		</tr>
 
 		@foreach (var item in Model)
 		{
-			<tr>
-				<td>
-					@Html.ActionLink(item.Name, $"Details/{item.Id}")
-				</td>
-				<td>
-					@{
-						string discountRate = item.MembershipType == null ?
-							"0% (Not a member)" : $"{item.MembershipType.DiscountRate}%";
-						@discountRate
-					}
-				</td>
-			</tr>
+	<tr>
+		<td>
+			@Html.ActionLink(item.Name, $"Details/{item.Id}")
+		</td>
+		<td>
+			@{
+				string discountRate = item.MembershipType == null ?
+					"0% (Not a member)" : $"{item.MembershipType.DiscountRate}%";
+				@discountRate
+			}
+		</td>
+		<td>
+			@{
+				string membershipDescription = item.MembershipType == null ?
+					"Not a member" : $"{item.MembershipType.Description}";
+				@membershipDescription
+			}
+		</td>
+	</tr>
 		}
 	</table>
 }
