@@ -216,9 +216,22 @@
     <Compile Include="Migrations\201907150022329_AddBirthdayToCustomer.Designer.cs">
       <DependentUpon>201907150022329_AddBirthdayToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907150043140_GreateGenreAndAddMovieDetails.cs" />
+    <Compile Include="Migrations\201907150043140_GreateGenreAndAddMovieDetails.Designer.cs">
+      <DependentUpon>201907150043140_GreateGenreAndAddMovieDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907150045030_PopulateGenres.cs" />
+    <Compile Include="Migrations\201907150045030_PopulateGenres.Designer.cs">
+      <DependentUpon>201907150045030_PopulateGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907150122575_GenreIsRequiredForMovies.cs" />
+    <Compile Include="Migrations\201907150122575_GenreIsRequiredForMovies.Designer.cs">
+      <DependentUpon>201907150122575_GenreIsRequiredForMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -332,6 +345,7 @@
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -367,6 +381,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907150022329_AddBirthdayToCustomer.resx">
       <DependentUpon>201907150022329_AddBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907150043140_GreateGenreAndAddMovieDetails.resx">
+      <DependentUpon>201907150043140_GreateGenreAndAddMovieDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907150045030_PopulateGenres.resx">
+      <DependentUpon>201907150045030_PopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907150122575_GenreIsRequiredForMovies.resx">
+      <DependentUpon>201907150122575_GenreIsRequiredForMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

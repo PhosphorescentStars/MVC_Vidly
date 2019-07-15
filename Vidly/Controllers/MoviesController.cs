@@ -2,12 +2,19 @@
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
+using System.Linq;
 
 namespace Vidly.Controllers
 {
 	public class MoviesController : Controller
 	{
-		private static List<Movie> movies = new List<Movie>()
+		private ApplicationDbContext context;
+
+		public MoviesController() => context = new ApplicationDbContext();
+		protected override void Dispose(bool disposing) => context.Dispose();
+
+		private static List<Movie> movies0 = new List<Movie>()
 		{
 			new Movie(){ Id =1, Name="Shrek" },
 			new Movie(){ Id =2, Name="Wall-E" }
@@ -36,6 +43,11 @@ namespace Vidly.Controllers
 			return Content($"El id es {id}");
 		}
 
+		public ActionResult Details(int id)
+		{
+			return View(context.Movies.Include(m => m.Genre).Where(m => m.Id.Equals(id)).Single());
+		}
+
 		public ActionResult Index(int? pageIndex, string sortBy)
 		{
 			//if (!pageIndex.HasValue)
@@ -45,7 +57,7 @@ namespace Vidly.Controllers
 			//	sortBy = "Name";
 
 			//return Content($"PageIndex = {pageIndex}, sortBy = {sortBy}");
-			return View(movies);
+			return View(context.Movies);
 		}
 
 		[Route("movies/released/{year:min(2000)}/{month:regex(\\d{2}):range(1,12)}")]

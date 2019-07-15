@@ -1,23 +1,24 @@
 ﻿@model IEnumerable<Vidly.Models.Movie>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Movies";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Movies</h2>
 <table class="table table-bordered table-striped">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name) &nbsp; <span class="glyphicon glyphicon-film"></span>
-        </th>
-    </tr>
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.Name) &nbsp; <span class="glyphicon glyphicon-film"></span>
+		</th>
+	</tr>
 
-    @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-    </tr>
-}
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.ActionLink(item.Name, $"Details/{item.Id}", "Movies")
+			</td>
+		</tr>
+	}
 </table>
